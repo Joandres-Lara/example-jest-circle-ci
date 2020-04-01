@@ -1,0 +1,38 @@
+{
+  "name": "example-jest-circleci",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --ci"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joandres-Lara/example-jest-circle-ci.git"
+  },
+  "keywords": [
+    "jest",
+    "example",
+    "react",
+    "circle-ci"
+  ],
+  "author": "Joan Andrés Lara Mora",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joandres-Lara/example-jest-circle-ci/issues"
+  },
+  "homepage": "https://github.com/Joandres-Lara/example-jest-circle-ci#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-transform-async-to-generator": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
+    "babel-plugin-styled-components": "^1.10.7",
+    "babel-preset-fbjs": "^3.3.0",
+    "jest": "^25.2.4"
+  }
+}
