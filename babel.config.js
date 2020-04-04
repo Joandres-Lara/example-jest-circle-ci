@@ -1,4 +1,24 @@
 const __DEV__ = process.env.NODE_ENV !== 'production';
+const __TEST__ = process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'testing';
+/**
+ * Configuración para el present de @babel/preset-env.
+ * 
+ * @var {object} configPresetBabelEnv
+ */
+const configPresetBabelEnv = {
+ loose: true
+};
+
+if(__TEST__){
+ /**
+  * Configuración para los test de Jest.
+  * Para más información ver: 
+  * https://jestjs.io/docs/en/getting-started#using-babel
+  */
+ configPresetBabelEnv.targets = {
+  node: 'current'
+ }
+}
 /**
  * Configuración para babel
  * 
@@ -9,7 +29,7 @@ module.exports = function configureBabel(api){
 
  return {
   presets: [
-   require('@babel/preset-env', { loose: true }),
+   require('@babel/preset-env', configPresetBabelEnv),
    require('@babel/preset-react'),
    require('babel-preset-fbjs')
   ],
