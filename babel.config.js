@@ -6,7 +6,8 @@ const __TEST__ = process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'te
  * @var {object} configPresetBabelEnv
  */
 const configPresetBabelEnv = {
- loose: true
+ loose: true,
+ useBuiltIns: 'usage'
 };
 
 if(__TEST__){
@@ -43,7 +44,9 @@ module.exports = function configureBabel(api){
    require('@babel/plugin-transform-async-to-generator'),
    require('@babel/plugin-proposal-class-properties', { loose: true }),
    require('@babel/plugin-syntax-dynamic-import'),
-   require('@babel/plugin-transform-runtime'),
+   require('@babel/plugin-transform-runtime', {
+    corejs: 3
+   }),
    require('@babel/plugin-transform-react-jsx-source')
   ]
  }
